@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>myproject</title>
+    <link rel="stylesheet" type="text/css" href="static/main.css">
+    <style>
+      .active{
+        width: 200px;
+        background: red;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+    </div>
+    <div id="app2">
+      <li v-for= "value in Object">
+        {{ value }}
+      </li>
+    </div>
+     <!--built files will be auto injected-->
+    <div id="menu">
+      <div v-bind :class="active : isactive"></div>
+      <h1 v-if="seen">可以见见我</h1>
+    </div>
+
+  </body>
+  <script>
+    new Vue({
+      el: '#app2' ,
+      data:{
+        Object: {
+          name: '菜鸟教程',
+          url: 'http://www.runoob.com',
+        },
+      },
+      computed:{
+        site:{
+          get: function () {
+
+          },
+          set:function (newvalue) {
+            
+          }
+        }
+      }
+      }
+    )
+  </script>
+</html>
